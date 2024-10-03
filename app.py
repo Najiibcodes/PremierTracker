@@ -32,5 +32,4 @@ def home():
     standings = get_premier_league_standings()
     return render_template('index.html', standings=standings)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# Note: No app.run() here for production
