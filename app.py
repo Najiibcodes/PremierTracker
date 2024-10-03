@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-API_KEY = '34cb4d9a2a12468f9e22a8f7dca87b5a'
+API_KEY = 'your_api_key'
 BASE_URL = 'https://api.football-data.org/v4/competitions/PL/standings'
 
 def get_premier_league_standings():
@@ -32,4 +32,5 @@ def home():
     standings = get_premier_league_standings()
     return render_template('index.html', standings=standings)
 
-# Note: No app.run() here for production
+if __name__ == '__main__':
+    app.run(debug=True)
